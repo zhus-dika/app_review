@@ -1,0 +1,5 @@
+[flake8]
+exclude = .git, .ipynb_checkpoints
+max-complexity = 10
+max-line-length = 120
+extend-ignore = E203

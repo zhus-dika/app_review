@@ -1,0 +1,8 @@
+name: app_review
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10.13
+  - poetry=1.7.1
+  - apache-airflow=2.8.0
