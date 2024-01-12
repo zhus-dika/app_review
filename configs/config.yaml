@@ -1,0 +1,14 @@
+spark:
+  master: "local"
+  hadoop_user_name: "spark"
+  hadoop_default_fs: "file://"
+db:
+  host: "localhost"
+  port: 5432
+  database: "app_review"
+  user: "app_review"
+  password: "pass"
+lda:
+  seed: 42
+  n_topics: 5
+  max_iter: 5
