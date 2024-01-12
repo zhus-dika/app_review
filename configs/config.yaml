@@ -1,10 +1,10 @@
 spark:
-  master: "local"
+  master: "spark://spark-master:7077" # "local"
   hadoop_user_name: "spark"
-  hadoop_default_fs: "file://"
+  hadoop_default_fs: "hdfs://namenode:8020" # "hdfs://localhost:8020"
 db:
-  host: "localhost"
-  port: 5432
+  host: "postgres" # "localhost"
+  port: 6432
   database: "app_review"
   user: "app_review"
   password: "pass"
