@@ -1,6 +1,7 @@
 spark:
+  use_sparknlp: false
   master: "spark://spark-master:7077" # "local"
-  hadoop_user_name: "spark"
+  hadoop_user_name: "app_review"
   hadoop_default_fs: "hdfs://namenode:8020" # "hdfs://localhost:8020"
 db:
   host: "postgres" # "localhost"
@@ -11,4 +12,4 @@ db:
 lda:
   seed: 42
   n_topics: 5
-  max_iter: 5
+  max_iter: 30

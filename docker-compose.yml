@@ -13,8 +13,6 @@ services:
       - ./configs/hadoop.env
     environment:
       - ENSURE_NAMENODE_DIR=/tmp/hadoop-root/dfs/name
-    volumes:
-      - hadoop_namenode:/data
 
   datanode:
     image: apache/hadoop:3.3.6
@@ -24,8 +22,6 @@ services:
       - namenode
     env_file:
       - ./configs/hadoop.env
-    volumes:
-      - hadoop_datanode:/data
 
   spark-master:
     image: bitnami/spark:3.3.4
@@ -51,7 +47,7 @@ services:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
       - SPARK_WORKER_MEMORY=1G
-      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_CORES=4
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
       - SPARK_RPC_ENCRYPTION_ENABLED=no
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
@@ -117,8 +113,6 @@ services:
       - webapp:/app_review
 
 volumes:
-  hadoop_namenode:
-  hadoop_datanode:
   pgdata:
   airflow:
   webapp:
