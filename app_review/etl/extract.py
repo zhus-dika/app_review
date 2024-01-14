@@ -2,7 +2,6 @@ import time
 from datetime import date, datetime
 from logging import info as log_info
 
-from app_store_scraper import AppStore
 from google_play_scraper import Sort
 from google_play_scraper import reviews as google_play_scraper_reviews
 from pyspark.sql import Row, SparkSession
@@ -16,6 +15,7 @@ from pyspark.sql.types import (
     TimestampType,
 )
 
+from .app_store_scraper.app_store import AppStore
 from .consts import MAX_APP_REVIEWS_COUNT
 from .utils import (
     AppStoreEntity,

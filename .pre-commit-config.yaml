@@ -32,7 +32,7 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
-        args: ["--explicit-package-bases"]
+        args: ["--install-types", "--non-interactive"]
   - repo: https://github.com/iamthefij/docker-pre-commit
     rev: v3.0.1
     hooks:
